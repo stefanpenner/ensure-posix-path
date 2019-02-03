@@ -1,6 +1,6 @@
-var path = require('path');
+import path = require('path');
 
-module.exports = function ensurePosix(filepath) {
+export = function ensurePosix(filepath: string) {
   if (path.sep !== '/') {
     return filepath.split(path.sep).join('/');
   }
